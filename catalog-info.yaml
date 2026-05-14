@@ -1,19 +1,14 @@
-# --- DOMÍNIO ---
-apiVersion: backstage.io/v1alpha1
-kind: Domain
-metadata:
-  name: financeiro
-spec:
-  owner: group:diretoria-financeira
 ---
 # --- GRUPOS ---
 apiVersion: backstage.io/v1alpha1
 kind: Group
 metadata:
   name: cartoes-credito
+  description: "Time de Cartões de Crédito"
 spec:
   type: team
-  children: []
+  owner: group:diretoria-financeira # Opcional: liga ao dono do domínio
+  children: [] # Se não houver subgrupos, use os colchetes vazios
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Group
@@ -21,6 +16,7 @@ metadata:
   name: conta-corrente
 spec:
   type: team
+  children: [] 
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Group
@@ -28,6 +24,7 @@ metadata:
   name: pix
 spec:
   type: team
+  children: []
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Group
@@ -35,32 +32,4 @@ metadata:
   name: produtos-financeiros
 spec:
   type: team
----
-# --- USUÁRIOS ---
-apiVersion: backstage.io/v1alpha1
-kind: User
-metadata:
-  name: emanuel-silva
-spec:
-  memberOf: [cartoes-credito]
----
-apiVersion: backstage.io/v1alpha1
-kind: User
-metadata:
-  name: pedro-rodrigues
-spec:
-  memberOf: [conta-corrente]
----
-apiVersion: backstage.io/v1alpha1
-kind: User
-metadata:
-  name: viviane-rodrigues
-spec:
-  memberOf: [pix]
----
-apiVersion: backstage.io/v1alpha1
-kind: User
-metadata:
-  name: edna-lemos
-spec:
-  memberOf: [produtos-financeiros]
+  children: []
