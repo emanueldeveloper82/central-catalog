@@ -1,27 +1,17 @@
+# 1. O DOMÍNIO (O topo da pirâmide de negócio)
 apiVersion: backstage.io/v1alpha1
 kind: Domain
 metadata:
   name: financeiro
-  description: Setor responsável por todas as operações financeiras da organização.
+  description: Setor Financeiro da Organização
 spec:
-  owner: group:diretoria-financeira
-
+  owner: group:diretoria-financeira # Grupo que manda no setor como um todo
 ---
-# --- GRUPOS ---
+# 2. OS GRUPOS (Times de pessoas)
 apiVersion: backstage.io/v1alpha1
 kind: Group
 metadata:
   name: cartoes-credito
-  description: "Time de Cartões de Crédito"
-spec:
-  type: team
-  owner: group:diretoria-financeira # Opcional: liga ao dono do domínio
-  children: [] # Se não houver subgrupos, use os colchetes vazios
----
-apiVersion: backstage.io/v1alpha1
-kind: Group
-metadata:
-  name: conta-corrente
 spec:
   type: team
   children: [] 
@@ -34,10 +24,17 @@ spec:
   type: team
   children: []
 ---
+# 3. OS USUÁRIOS (Vinculados aos Grupos)
 apiVersion: backstage.io/v1alpha1
-kind: Group
+kind: User
 metadata:
-  name: produtos-financeiros
+  name: emanuel-silva
 spec:
-  type: team
-  children: []
+  memberOf: [cartoes-credito]
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: viviane-rodrigues
+spec:
+  memberOf: [pix]
