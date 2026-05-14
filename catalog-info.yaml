@@ -1,3 +1,11 @@
+apiVersion: backstage.io/v1alpha1
+kind: Domain
+metadata:
+  name: financeiro
+  description: Setor responsável por todas as operações financeiras da organização.
+spec:
+  owner: group:diretoria-financeira
+
 ---
 # --- GRUPOS ---
 apiVersion: backstage.io/v1alpha1
