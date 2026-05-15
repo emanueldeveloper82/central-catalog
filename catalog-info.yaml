@@ -7,7 +7,40 @@ metadata:
 spec:
   owner: group:diretoria-financeira # Grupo que manda no setor como um todo
 ---
-# 2. OS GRUPOS (Times de pessoas)
+# 2. O SISTEMA (conjunto de componentes)
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: banking-system
+  description: Core Banking e serviços de conta corrente
+spec:
+  owner: group:conta-corrente
+---
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: pix-ecosystem
+  description: Ecossistema de pagamentos instantâneos (Pix)
+spec:
+  owner: group:pix
+---
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: card-services
+  description: Gestão de cartões, limites e autorizações
+spec:
+  owner: group:cartoes-credito
+---
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: wealth-manager
+  description: Gestão de investimentos e produtos financeiros
+spec:
+  owner: group:produtos-financeiros
+---
+# 3. OS GRUPOS (Times de pessoas)
 apiVersion: backstage.io/v1alpha1
 kind: Group
 metadata:
@@ -41,6 +74,16 @@ spec:
 apiVersion: backstage.io/v1alpha1
 kind: Group
 metadata:
+  name: produtos-financeiros
+spec:
+  type: team
+  parent: diretoria-financeira
+  owner: user:edna-lemos
+  children: []
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
   name: diretoria-financeira
   description: "Diretoria executiva financeira"
 spec:
@@ -48,7 +91,7 @@ spec:
   children: [cartoes-credito, conta-corrente, pix, produtos-financeiros]
 
 ---
-# 3. OS USUÁRIOS (Vinculados aos Grupos)
+# 4. OS USUÁRIOS (Vinculados aos Grupos)
 apiVersion: backstage.io/v1alpha1
 kind: User
 metadata:
@@ -76,13 +119,24 @@ spec:
 apiVersion: backstage.io/v1alpha1
 kind: User
 metadata:
-  name: pedro-rodrigues  
-  description: "Responsável Técnico - Conta Corrente"  
+  name: pedro-rodrigues
+  description: "Responsável Técnico - Conta Corrente"
 spec:
-  memberOf: [conta-corrente] 
+  memberOf: [conta-corrente]
   profile:
     displayName: Pedro Rodrigues
-    title: Gestor de Conta Corrente 
+    title: Gestor de Conta Corrente
     email: pedro.rodrigues@engdb.com.br
-  
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: edna-lemos
+  description: "Responsável Técnico - Produtos Financeiros"
+spec:
+  memberOf: [produtos-financeiros]
+  profile:
+    displayName: Edna Lemos
+    title: Gestora de Produtos Financeiros
+    email: edna.lemos@engdb.com.br
 
