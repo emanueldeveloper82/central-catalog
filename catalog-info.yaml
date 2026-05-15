@@ -46,5 +46,18 @@ apiVersion: backstage.io/v1alpha1
 kind: User
 metadata:
   name: viviane-rodrigues
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: pedro-rodrigues
+  description: "Responsável Técnico - Conta Corrente"
+spec:
+  profile:
+    displayName: Pedro Rodrigues
+    email: pedro.rodrigues@engdb.com.br
+  memberOf: [conta-corrente] # Vincula ele ao time
+
+  
 spec:
   memberOf: [pix]
