@@ -46,6 +46,8 @@ apiVersion: backstage.io/v1alpha1
 kind: User
 metadata:
   name: viviane-rodrigues
+spec:
+  memberOf: [pix]
 ---
 apiVersion: backstage.io/v1alpha1
 kind: User
@@ -56,8 +58,5 @@ spec:
   profile:
     displayName: Pedro Rodrigues
     email: pedro.rodrigues@engdb.com.br
-  memberOf: [conta-corrente] # Vincula ele ao time
+  memberOf: [conta-corrente] 
 
-  
-spec:
-  memberOf: [pix]
