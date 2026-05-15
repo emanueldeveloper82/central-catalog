@@ -2,7 +2,7 @@
 apiVersion: backstage.io/v1alpha1
 kind: Domain
 metadata:
-  name: Financeiro Zetra Bank
+  name: financeiro-zetra-bank
   description: Setor Financeiro da Organização
 spec:
   owner: group:diretoria-financeira # Grupo que manda no setor como um todo
