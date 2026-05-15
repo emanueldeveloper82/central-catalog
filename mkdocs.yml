@@ -1,0 +1,3 @@
+site_name: financeiro-zetra-bank
+plugins:
+  - techdocs-core

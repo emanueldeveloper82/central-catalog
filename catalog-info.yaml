@@ -4,6 +4,8 @@ kind: Domain
 metadata:
   name: financeiro-zetra-bank
   description: Setor Financeiro da Organização
+  annotations:    
+    backstage.io/techdocs-ref: dir:.
 spec:
   owner: group:diretoria-financeira # Grupo que manda no setor como um todo
 ---
