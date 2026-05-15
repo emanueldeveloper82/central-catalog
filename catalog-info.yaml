@@ -24,6 +24,16 @@ spec:
   type: team
   children: []
 ---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: diretoria-financeira
+  description: "Diretoria executiva financeira"
+spec:
+  type: department
+  children: [cartoes-credito, conta-corrente, pix, produtos-financeiros]
+
+---
 # 3. OS USUÁRIOS (Vinculados aos Grupos)
 apiVersion: backstage.io/v1alpha1
 kind: User
