@@ -14,6 +14,8 @@ metadata:
   name: cartoes-credito
 spec:
   type: team
+  owner: user:emanuel-silva
+  parent: diretoria-financeira
   children: [] 
 ---
 apiVersion: backstage.io/v1alpha1
@@ -22,6 +24,8 @@ metadata:
   name: conta-corrente
 spec:
   type: team
+  owner: user:pedro-rodrigues 
+  parent: diretoria-financeira
   children: []  
 ---
 apiVersion: backstage.io/v1alpha1
@@ -30,6 +34,8 @@ metadata:
   name: pix
 spec:
   type: team
+  owner: user:viviane-rodrigues
+  parent: diretoria-financeira
   children: []
 ---
 apiVersion: backstage.io/v1alpha1
@@ -52,6 +58,7 @@ spec:
   memberOf: [cartoes-credito]
   profile:
     displayName: Emanuel silva
+    title: Gestor de Cartões de Crédito
     email: emanuel.silva@engdb.com.br
 ---
 apiVersion: backstage.io/v1alpha1
@@ -63,17 +70,19 @@ spec:
   memberOf: [pix]
   profile:
     displayName: Viviane Rodrigues
+    title: Gestora de Pix
     email: viviane.rodrigues@engdb.com.br
 ---
 apiVersion: backstage.io/v1alpha1
 kind: User
 metadata:
-  name: pedro-rodrigues
-  description: "Responsável Técnico - Conta Corrente"
+  name: pedro-rodrigues  
+  description: "Responsável Técnico - Conta Corrente"  
 spec:
   memberOf: [conta-corrente] 
   profile:
     displayName: Pedro Rodrigues
+    title: Gestor de Conta Corrente 
     email: pedro.rodrigues@engdb.com.br
   
 
