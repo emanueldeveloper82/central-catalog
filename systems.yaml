@@ -1,0 +1,32 @@
+# 2. SISTEMA (conjunto de componentes)
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: banking-system
+  description: Core Banking e serviços de conta corrente
+spec:
+  owner: group:conta-corrente
+---
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: pix-ecosystem
+  description: Ecossistema de pagamentos instantâneos (Pix)
+spec:
+  owner: group:pix
+---
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: card-services
+  description: Gestão de cartões, limites e autorizações
+spec:
+  owner: group:cartoes-credito
+---
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: wealth-manager
+  description: Gestão de investimentos e produtos financeiros
+spec:
+  owner: group:produtos-financeiros

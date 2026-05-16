@@ -1,0 +1,48 @@
+# 4. OS USUÁRIOS (Vinculados aos Grupos)
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: emanuel-silva
+  description: "Responsável Técnico - Cartões de Crédito"
+spec:
+  memberOf: [cartoes-credito]
+  profile:
+    displayName: Emanuel silva
+    title: Gestor de Cartões de Crédito
+    email: emanuel.silva@engdb.com.br
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: viviane-rodrigues
+  description: "Responsável Técnico - Pix"
+spec:
+  memberOf: [pix]
+  profile:
+    displayName: Viviane Rodrigues
+    title: Gestora de Pix
+    email: viviane.rodrigues@engdb.com.br
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: pedro-rodrigues
+  description: "Responsável Técnico - Conta Corrente"
+spec:
+  memberOf: [conta-corrente]
+  profile:
+    displayName: Pedro Rodrigues
+    title: Gestor de Conta Corrente
+    email: pedro.rodrigues@engdb.com.br
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: edna-lemos
+  description: "Responsável Técnico - Produtos Financeiros"
+spec:
+  memberOf: [produtos-financeiros]
+  profile:
+    displayName: Edna Lemos
+    title: Gestora de Produtos Financeiros
+    email: edna.lemos@engdb.com.br

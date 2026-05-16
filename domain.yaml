@@ -1,0 +1,10 @@
+# 1. O DOMÍNIO (O topo da pirâmide de negócio)
+apiVersion: backstage.io/v1alpha1
+kind: Domain
+metadata:
+  name: financeiro-zetra-bank
+  description: Setor Financeiro da Organização
+  annotations:    
+    backstage.io/techdocs-ref: dir:.
+spec:
+  owner: group:diretoria-financeira 

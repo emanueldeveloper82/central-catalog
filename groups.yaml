@@ -1,0 +1,49 @@
+# 3. OS GRUPOS (Times de pessoas)
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: cartoes-credito
+spec:
+  type: team
+  owner: user:emanuel-silva
+  parent: diretoria-financeira
+  children: [] 
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: conta-corrente
+spec:
+  type: team
+  owner: user:pedro-rodrigues 
+  parent: diretoria-financeira
+  children: []  
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: pix
+spec:
+  type: team
+  owner: user:viviane-rodrigues
+  parent: diretoria-financeira
+  children: []
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: produtos-financeiros
+spec:
+  type: team
+  parent: diretoria-financeira
+  owner: user:edna-lemos
+  children: []
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: diretoria-financeira
+  description: "Diretoria executiva financeira"
+spec:
+  type: department
+  children: [cartoes-credito, conta-corrente, pix, produtos-financeiros]
